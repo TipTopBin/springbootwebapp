@@ -6,3 +6,8 @@ that is part of the tutorial series on Spring Boot available from by website at 
 
 ## Checkout the full tutorial here!
 [Spring Boot - making Spring Fun again!](https://springframework.guru/spring-boot-web-application-part-1-spring-initializr/)
+
+Steps:
+mkdir springbootwebapp
+docker build -t springbootwebapp .
+docker run -d -p 8080:8080 springbootwebapp
