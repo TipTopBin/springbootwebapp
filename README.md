@@ -11,3 +11,6 @@ Steps:
 mkdir springbootwebapp
 docker build -t springbootwebapp .
 docker run -d -p 8080:8080 springbootwebapp
+
+use jib
+docker run -d -p 8080:8080 registry.cn-hangzhou.aliyuncs.com/tiptopbin/spring-boot-web:0.0.1-SNAPSHOT

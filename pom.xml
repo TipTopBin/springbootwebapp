@@ -89,6 +89,30 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<from>
+						<image>openjdk:alpine</image>
+					</from>
+					<to>
+						<image>registry.cn-hangzhou.aliyuncs.com/tiptopbin/${project.artifactId}:${project.version}</image>
+						<auth>
+							<username>registry_username</username>
+							<password>registry_password</password>
+						</auth>
+					</to>
+					<allowInsecureRegistries>true</allowInsecureRegistries>
+					<container>
+						<jvmFlags>
+							<jvmFlag>-Djava.security.edg=file:/dev/./urandom</jvmFlag>
+						</jvmFlags>
+					</container>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
